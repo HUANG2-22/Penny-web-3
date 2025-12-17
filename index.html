@@ -1,210 +1,249 @@
-<!DOCTYPE html> // 声明文档类型为 HTML5
-<html lang="en"> // 根标签，设置网页语言为英文（可改为 "zh-CN" 表示中文）
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8" /> // 设置字符编码为 UTF-8，防止中文乱码
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" /> // 移动端视口设置，确保网页在手机上正常显示
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" /> // 兼容模式设置，确保在 IE 浏览器中性能最佳
-	<meta name="description" content="Home page for Anna Gilhespy children's portrait artist"> // 「可替换」：网页描述，影响搜索引擎搜索结果展示
-	<meta name="keywords" content="Portrait, artist, ..."> // 「可替换」：网页关键词，用于 SEO 优化
-	<meta name="author" content="Anna Gilhespy"> // 「可替换」：网页作者，改成你的名字
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png"> // 「可替换」：浏览器标签页小图标（32px），路径指向你的 icon 文件
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_16x16.png"> // 「可替换」：浏览器标签页小图标（16px）
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/...bootstrap.min.css" /> // 引入外部 Bootstrap 样式库（负责布局）
-	<link rel="stylesheet" href="https://use.fontawesome.com/...all.css"> // 引入 FontAwesome 图标库（负责社交图标展示）
-	<link rel="stylesheet" href="assets/css/style.css" /> // 引入你自己的主样式表（自定义颜色、间距等）
-	<link rel="stylesheet" href="assets/css/overflowfix.css" /> // 引入用于修复边框/溢出问题的补丁样式表
-	<title>Home | MAX PENNY</title> // 「可替换」：浏览器标签页显示的标题文字
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="description" content="Home page for Anna Gilhespy children's portrait artist">
+	<meta name="keywords"
+		content="Portrait, artist, portrait artist, artist amsterdam, custom, drawing, painting, custom drawing, custom painting, custom portrait, children, kids, child portrait, custom portrait">
+	<meta name="author" content="Anna Gilhespy">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_16x16.png">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- fixing border problems caused by .container-fluid{width:99%} in main css file, which was used on all other pages to fix overflow -->
+	<link rel="stylesheet" href="assets/css/overflowfix.css" />
+	<title>Home | MAX PENNY</title>
 
 </head>
 
 <body>
-	// 导航栏区域开始
-	<nav class="navbar navbar-expand-md navbar-light fixed-top home-navbar"> // 导航栏外壳：固定在顶部，响应式展开
+	<!-- LOGO AND NAV BAR -->
+	<nav class="navbar navbar-expand-md navbar-light fixed-top home-navbar">
 
-		// 标志区域
-		<a class="navbar-brand mr-1" href="index.html"> // 点击 Logo 跳转到的链接（通常是主页）
-			<img src="assets/images/logo.gif" height="40" alt="AG logo" title="AG logo"> // 「可替换」：Logo 图片路径。src 指向你的 logo 路径
+		<!-- LOGO -->
+		<a class="navbar-brand mr-1" href="index.html">
+			<img src="assets/images/logo.gif" height="40" alt="AG logo" title="AG logo">
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" ...> // 手机端显示的“汉堡包”折叠按钮
-			<span class="navbar-toggler-icon"></span> // 折叠按钮的图标
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+			aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		// 导航链接列表
+		<!-- NAV BAR LINKS -->
 		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<ul class="navbar-nav ml-auto text-uppercase"> // 链接向右对齐，文字大写
+			<ul class="navbar-nav ml-auto text-uppercase">
 				<li class="nav-item">
-					<a class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a> // 「可替换」：导航文字和跳转链接
+					<a class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="about.html">About</a> // 「可替换」：关于页面链接
+					<a class="nav-link" href="about.html">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="gallery.html">Gallery</a> // 「可替换」：画廊/作品集链接
+					<a class="nav-link" href="gallery.html">Gallery</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pricing.html">Pricing</a> // 「可替换」：价格页面链接
+					<a class="nav-link" href="pricing.html">Pricing</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="order.html">How to Order</a> // 「可替换」：订购说明链接
+					<a class="nav-link" href="order.html">How to Order</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="contact.html">Contact</a> // 「可替换」：联系方式链接
+					<a class="nav-link" href="contact.html">Contact</a>
 				</li>
 			</ul>
-			// 导航栏右侧的按钮
-			<a class="btn btn-info text-uppercase ml-md-3" href="contact.html">Request Quote</a> // 「可替换」：按钮文字（如“立即咨询”）和跳转链接
+			<!-- REQUEST QUOTE BUTTON -->
+			<a class="btn btn-info text-uppercase ml-md-3" href="contact.html">Request Quote</a>
 		</div>
 	</nav>
 
-	// 首页首屏大图/视频展示区
-	// 提示：该视频仅在电脑端显示，节省手机流量
-	<div class="video-wrapper d-none d-lg-block"> // 电脑端显示的容器
-		<iframe class="video" src="https://player.vimeo.com/video/317180428?background=1..."> // 「可替换」：视频源地址。可换成你的 Vimeo 或本地视频链接
+	<!-- FULL WIDTH HERO RESPONSIVE VIDEO/IMAGE -->
+	<!-- Video only active on desktop view, to save people from unwelcome data useage -->
+	<div class="video-wrapper d-none d-lg-block">
+		<iframe class="video"
+			src="https://player.vimeo.com/video/317180428?background=1&muted=1&autoplay=1&loop=1&title=0&byline=0&portrait=0">
 		</iframe>
-		<div class="container-fluid video-overlay"> // 覆盖在视频上的文字层
+		<div class="container-fluid video-overlay">
 			<div class="row">
 				<div class="col-12 text-white">
-					<h1>Anna Gilhespy</h1> // 「可替换」：首屏主标题（通常是你的大名）
-					<h3 class="fontchange-sm">Children's Portrait Artist</h3> // 「可替换」：副标题（你的职业/定位）
-					<p>Treasure your precious moments forever</p> // 「可替换」：口号/宣传语
+					<h1>Anna Gilhespy</h1>
+					<h3 class="fontchange-sm">Children's Portrait Artist</h3>
+					<p>Treasure your precious moments forever</p>
 				</div>
 			</div>
 		</div>
+		<!--END overlay-->
 	</div>
+	<!--END video element-->
 
-	// 提示：手机端用静态图代替视频
-	<div class="container-fluid p-0 m-0 d-lg-none"> // 手机端显示的容器
+	<!-- Static image replaces video on mobile devices, to save data usage -->
+	<div class="container-fluid p-0 m-0 d-lg-none">
 		<div class="row p-0 m-0">
 			<div class="col-12 p-0 m-0">
-				<figure class="special-hero-home" title="Black and white pencil drawing portrait..."> // 「可替换」：该处的背景图在 CSS 文件中的 .special-hero-home 修改
+				<figure class="special-hero-home" title="Black and white pencil drawing portrait of a young girl">
 				</figure>
 			</div>
-			<div class="container-fluid hero-home-overlay"> // 手机端图片上的文字覆盖层
+			<div class="container-fluid hero-home-overlay">
 				<div class="row">
 					<div class="col-12 text-white">
-						<h1>Anna Gilhespy</h1> // 「可替换」：手机端主标题
-						<h3 class="fontchange-sm">Children's Portrait Artist</h3> // 「可替换」：手机端副标题
-						<p>Treasure your precious moments forever</p> // 「可替换」：手机端口号
+						<h1>Anna Gilhespy</h1>
+						<h3 class="fontchange-sm">Children's Portrait Artist</h3>
+						<p>Treasure your precious moments forever</p>
 					</div>
 				</div>
 			</div>
+			<!--END overlay-->
 		</div>
 	</div>
+	<!--END image element -->
 
 
-	// 网页主要内容区域
+	<!-- MAIN CONTENT OF HOME PAGE -->
 	<main>
 
-		// 核心卖点/个人介绍段落
+		<!-- SALES PITCH -->
 		<section class="container-fluid">
 			<div class="row justify-content-center my-5 text-center">
 				<div class="col-12 p-emphasis">
-					<h2 class="mb-3">Children grow up so fast</h2> // 「可替换」：内容大标题
-					<p>In the rush, it’s easy to forget the way they used to be.</p> // 「可替换」：介绍文本
-					<p>I use traditional methods to make timeless portraits...</p> // 「可替换」：介绍文本
-					<p>My pencil drawings and oil paintings...</p> // 「可替换」：介绍文本
+					<h2 class="mb-3">Children grow up so fast</h2>
+					<p>In the rush, it’s easy to forget the way they used to be.</p>
+					<p>I use traditional methods to make timeless portraits from your photographs.</p>
+					<p>My pencil drawings and oil paintings are made in full consultation with you, and will last for
+						generations.</p>
 				</div>
 			</div>
 		</section>
 
-		// 客户评价/推荐语区域
+		<!-- TESTIMONIALS -->
 		<div id="testimonialsHero">
 			<div class="hero-overlay">
 				<section class="container-fluid testimonials text-center">
 					<div class="row">
 						<div class="col my-3">
-							<h3>What my Customers Say...</h3> // 「可替换」：板块标题
+							<h3>What my Customers Say...</h3>
 						</div>
 					</div>
 					<div class="row justify-content-around">
-						<div class="quote col-sm-12 col-md-5 col-xl-3"> // 评价 1
+						<div class="quote col-sm-12 col-md-5 col-xl-3">
 							<blockquote>
-								<p>Anna gave me great advice...</p> // 「可替换」：评价内容
+								<p>Anna gave me great advice on a suitable photo for my daughter's portrait, met the
+									deadline
+									and even delivered the final product directly to my door, but most importantly, she
+									created
+									a unique drawing of my daughter which really reflects her personality. We've had
+									tonnes
+									of
+									compliments
+									from friends and adoring family members.</p>
 								<footer>
-									— <cite>Lucie, Amsterdam</cite> // 「可替换」：评价者名字和地点
+									— <cite>Lucie, Amsterdam</cite>
 								</footer>
 							</blockquote>
 						</div>
-						<div class="quote col-sm-12 col-md-5 col-xl-3"> // 评价 2
+						<div class="quote col-sm-12 col-md-5 col-xl-3">
 							<blockquote>
-								<p>When I saw a sample of Anna’s work. WOW! ...</p> // 「可替换」：评价内容
+								<p>When I saw a sample of Anna’s work. WOW! It took my breath away.
+									When trying to think of a special and unique gift for my partner, she automatically
+									came
+									to
+									mind.
+									I couldn’t have asked for a better reaction on his face when he saw the
+									sketch for the first time. It now has a very proud place in our home and we love
+									showing
+									it
+									off!</p>
 								<footer>
-									— <cite>Elke, Amstelveen</cite> // 「可替换」：评价者名字
+									— <cite>Elke, Amstelveen</cite>
 								</footer>
 							</blockquote>
 						</div>
-						<div class="quote col-sm-12 col-md-8 col-xl-3"> // 评价 3
+						<div class="quote col-sm-12 col-md-8 col-xl-3">
 							<blockquote>
-								<p>Not only was the artwork spectacular...</p> // 「可替换」：评价内容
+								<p>Not only was the artwork spectacular. The delivery was amazingly quick given that it
+									was
+									ordered during the Christmas rush and Anna went out of her way to deliver some
+									extra,
+									specially requested products which she had to source for me as well. My husband was
+									delighted
+									with his gift.</p>
 								<footer>
-									— <cite>Emmy, Amsterdam</cite> // 「可替换」：评价者名字
+									— <cite>Emmy, Amsterdam</cite>
 								</footer>
 							</blockquote>
 						</div>
 					</div>
 				</section>
 
-				// 评价区下方的引导按钮
+				<!-- BUTTON: VISIT GALLERY -->
 				<div class="container-fluid">
 					<div class="row text-center">
 						<div class="col-12">
-							<a class="btn btn-lg btn-info mt-5" href="gallery.html">Visit Gallery</a> // 「可替换」：按钮文字和链接
+							<a class="btn btn-lg btn-info mt-5" href="gallery.html">Visit Gallery</a>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 	</main>
 
-	// 页脚区域
+	<!-- FOOTER -->
 	<footer class="page-footer bg-secondary text-white">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 text-center text-shadow mb-4"> // 页脚导航链接
-						<a class="footer-nav" href="index.html">Home</a> // 「可替换」
-						<a class="footer-nav" href="about.html">About</a> // 「可替换」
-						<a class="footer-nav" href="gallery.html">Gallery</a> // 「可替换」
-						<a class="footer-nav" href="pricing.html">Pricing</a> // 「可替换」
-						<a class="footer-nav" href="order.html">How to Order</a> // 「可替换」
-						<a class="footer-nav" href="contact.html">Contact</a> // 「可替换」
+				<div class="col-12 text-center text-shadow mb-4">
+						<a class="footer-nav" href="index.html">Home</a>
+						<a class="footer-nav" href="about.html">About</a>
+						<a class="footer-nav" href="gallery.html">Gallery</a>
+						<a class="footer-nav" href="pricing.html">Pricing</a>
+						<a class="footer-nav" href="order.html">How to Order</a>
+						<a class="footer-nav" href="contact.html">Contact</a>
 				</div>
 				<div class="col-12 py-3">
-					// 社交媒体图标区
+					<!-- SOCIAL ICONS/LINKS -->
 					<div class="mb-1 flex-centre text-center social-icon-shadow">
-						<a class="ic-fb" href="https://facebook.com/..." target="_blank" rel="noopener"> // 「可替换」：你的 Facebook 链接
-							<i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i> // Facebook 图标
+						<a class="ic-fb" href="https://facebook.com/annagilhespyart" target="_blank"
+							aria-label="Find me on Facebook" rel="noopener">
+							<i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
 						</a>
-						<a class="ic-pin" href="https://pinterest.com/..." target="_blank" rel="noopener"> // 「可替换」：你的 Pinterest 链接
-							<i class="fab fa-pinterest fa-lg mr-md-5 mr-3 fa-2x"></i> // Pinterest 图标
+						<a class="ic-pin" href="https://pinterest.com/annagilhespy" target="_blank"
+							aria-label="Find me on Pinterest" rel="noopener">
+							<i class="fab fa-pinterest fa-lg mr-md-5 mr-3 fa-2x"></i>
 						</a>
-						<a class="ic-ins" href="https://instagram.com/..." target="_blank" rel="noopener"> // 「可替换」：你的 Instagram 链接
-							<i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i> // Instagram 图标
+						<a class="ic-ins" href="https://instagram.com/annagilhespy" target="_blank"
+							aria-label="Find me on Instagram" rel="noopener">
+							<i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
 						</a>
-						<a class="ic-twi" href="https://twitter.com/..." target="_blank" rel="noopener"> // 「可替换」：你的 Twitter 链接
-							<i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i> // Twitter 图标
+						<a class="ic-twi" href="https://twitter.com/annagilhespy" target="_blank"
+							aria-label="Find me on Twitter" rel="noopener">
+							<i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
 						</a>
-						<a class="ic-fl" href="https://flickr.com/..." target="_blank" rel="noopener"> // 「可替换」：你的 Flickr 链接
-							<i class="fab fa-flickr fa-lg fa-2x"></i> // Flickr 图标
+						<a class="ic-fl" href="https://flickr.com/people/annagilhespy" target="_blank"
+							aria-label="Find me on Flickr" rel="noopener">
+							<i class="fab fa-flickr fa-lg fa-2x"></i>
 						</a>
 					</div>
-					// 版权信息区
+					<!-- COPYRIGHT -->
 					<div class="text-shadow text-center py-3">
-						<small>©<span id="year"></span> Copyright: Anna Gilhespy all rights reserved</small> // 「可替换」：版权所属名字
-						<p class="mt-3">Website designed & developed by inSiteful</p> // 「可替换」：设计者说明（或删除）
+						<small>©<span id="year"></span> Copyright: Anna Gilhespy all rights reserved</small>
+						<p class="mt-3">Website designed & developed by inSiteful</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	// 引入各种功能所需的脚本
-	<script src="https://player.vimeo.com/api/player.js"></script> // Vimeo 视频播放器 API
-	<script src="https://cdnjs.cloudflare.com/...jquery.slim.min.js"></script> // jQuery 库（Bootstrap 依赖）
-	<script src="https://cdnjs.cloudflare.com/...popper.min.js"></script> // Popper 库（处理下拉菜单和弹窗）
-	<script src="https://cdnjs.cloudflare.com/...bootstrap.min.js"></script> // Bootstrap 核心 JavaScript
-	<script src="assets/js/main.js"></script> // 你自己的自定义 JS 脚本
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
